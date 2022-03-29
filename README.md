@@ -4,11 +4,11 @@ Aplicação dotnet console para cáculo do IMC.
 
 ## Funcionalidades
 
-    - Calcula o IMC 
+- Calcula o IMC 
     
 ## Tecnologias
 
-    - dotnet core 2.1
+- dotnet core 2.1
 
 ## Como Executar
     
