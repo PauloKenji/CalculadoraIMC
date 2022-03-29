@@ -4,11 +4,12 @@ Aplicação dotnet console para cáculo do IMC.
 
 ## Funcionalidades
 
-    - Calcula o IMC 
+- Calcula o IMC 
+- Informa como está a situação da massa corporal do usuário
     
 ## Tecnologias
 
-    - dotnet core 2.1
+- dotnet core 2.1
 
 ## Como Executar
     
