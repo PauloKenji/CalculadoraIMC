@@ -21,20 +21,43 @@ namespace CalculadoraIMC
 
             Console.WriteLine("Seu IMC é {0}", imc);
 
-            if(imc < 17){
+            if(imc < 17)
+            {
                 Console.WriteLine("Sua situação é muito abaixo do peso");
-            }else if(imc < 18.5){
+            }else if(imc < 18.5)
+            {
                 Console.WriteLine("Sua situação é Abaixo do peso");
-            }else if(imc < 25){
+            }else if(imc < 25)
+            {
                 Console.WriteLine("Sua situação é Peso normal");
-            }else if(imc < 30){
+            }else if(imc < 30)
+            {
                 Console.WriteLine("Sua situação é Acima do peso");
-            }else if(imc < 35){
+            }else if(imc < 35)
+            {
                 Console.WriteLine("Sua situação é Obesidade I");
-            }else if(imc < 40){
+            }else if(imc < 40)
+            {
                 Console.WriteLine("Sua situação é Obesidade II (severa)");
             }else
+            {
                 Console.WriteLine("Sua situação é Obesidade III (mórbida");
-        }
+            }
+
+            double pesoIdeal = 0;
+
+            if(imc < 18.5)
+            {
+                pesoIdeal = (18.5*(altura*altura)) - peso;
+                Console.WriteLine("Você precisa ganhar {0} Kg para atingir um peso ideal",pesoIdeal);
+            }else if(imc >= 25)
+            { 
+                pesoIdeal = peso - (24.99*(altura*altura));
+                Console.WriteLine("Você precisa perder {0} Kg para atingir um peso ideal",pesoIdeal);
+            }
+
+            
+            
+        } 
     }
 }

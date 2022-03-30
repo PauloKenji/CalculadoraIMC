@@ -6,6 +6,7 @@ Aplicação dotnet console para cáculo do IMC.
 
 - Calcula o IMC 
 - Informa como está a situação da massa corporal do usuário
+- Informa quantos kilos o usuário tem que perder ou ganhar para atingir o peso ideal
     
 ## Tecnologias
 
