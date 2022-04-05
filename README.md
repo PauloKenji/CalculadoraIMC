@@ -10,7 +10,7 @@ Aplicação dotnet console para cáculo do IMC.
     
 ## Tecnologias
 
-- dotnet core 2.1
+- dotnet core 6.0
 
 ## Como Executar
     

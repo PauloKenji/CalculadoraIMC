@@ -1,63 +1,19 @@
-﻿using System;
+﻿Console.WriteLine("Digite seu altura: ");
+Double Altura = Convert.ToDouble(Console.ReadLine());   
+Console.WriteLine("Digite seu peso: ");
+Double Peso = Convert.ToDouble(Console.ReadLine()); 
 
-namespace CalculadoraIMC
+Pessoa p1 = new Pessoa(Altura,Peso);
+
+Console.WriteLine("Seu Imc: {0}", p1.Imc);
+
+Console.WriteLine("Sua situação é {0}", p1.SituacaoPeso());
+if(p1.CalculoPesoIdeal() > 0.0)
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Qual o seu nome?");
-            string nome = Console.ReadLine();
-
-            Console.WriteLine("Qual a sua altura em metros? Ex. 1,63");
-            float altura = Convert.ToSingle(Console.ReadLine());
-
-            Console.WriteLine("Qual o seu peso em Kg? Ex: 59,3");
-            float peso = Convert.ToSingle(Console.ReadLine());
-
-            double imc = peso/(altura * altura);
-
-            Console.WriteLine("{0} sua altura é {1} e seu peso é {2}", nome, peso, altura);
-
-            Console.WriteLine("Seu IMC é {0}", imc);
-
-            if(imc < 17)
-            {
-                Console.WriteLine("Sua situação é muito abaixo do peso");
-            }else if(imc < 18.5)
-            {
-                Console.WriteLine("Sua situação é Abaixo do peso");
-            }else if(imc < 25)
-            {
-                Console.WriteLine("Sua situação é Peso normal");
-            }else if(imc < 30)
-            {
-                Console.WriteLine("Sua situação é Acima do peso");
-            }else if(imc < 35)
-            {
-                Console.WriteLine("Sua situação é Obesidade I");
-            }else if(imc < 40)
-            {
-                Console.WriteLine("Sua situação é Obesidade II (severa)");
-            }else
-            {
-                Console.WriteLine("Sua situação é Obesidade III (mórbida");
-            }
-
-            double pesoIdeal = 0;
-
-            if(imc < 18.5)
-            {
-                pesoIdeal = (18.5*(altura*altura)) - peso;
-                Console.WriteLine("Você precisa ganhar {0} Kg para atingir um peso ideal",pesoIdeal);
-            }else if(imc >= 25)
-            { 
-                pesoIdeal = peso - (24.99*(altura*altura));
-                Console.WriteLine("Você precisa perder {0} Kg para atingir um peso ideal",pesoIdeal);
-            }
-
-            
-            
-        } 
-    }
+    Console.WriteLine("Você precisa ganhar {0} Kg para atingir um peso ideal",p1.CalculoPesoIdeal());
+}else
+{
+    Console.WriteLine("Você precisa Perder {0} Kg para atingir um peso ideal",p1.CalculoPesoIdeal()*(-1));
 }
+
+
